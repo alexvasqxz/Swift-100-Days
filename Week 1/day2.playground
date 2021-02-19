@@ -1,0 +1,103 @@
+import UIKit
+
+/*
+ Day 2. Arrays, dictionaries, sets and enums
+    Created by Gustavo Alex Vasquez
+ Copyright © 2021 Alex Vasquez. All rights reserved.
+ */
+
+// 1. Arrays
+let john = "John Lennon"
+let paul = "Paul McCartney"
+let ringo = "Ringo Starr"
+
+let beatles = [john, paul, ringo]
+beatles[1]
+
+// 2. Sets
+let colors = Set(["red", "green", "blue"])
+
+let colors2 = Set(["blue", "blue", "black"])
+
+// 3. Tuples
+var name = (first: "Taylor", last: "Swift", age: 25)
+name.age
+name.first
+name.last
+
+var person = (name: "Alex", age: 21, isSingle: false)
+
+// 4. Arrays vs Sets vs Tuples
+
+// Tuple
+let address = (house: 555, street: "Taylor Avenue", city: "Texas")
+// Set
+var cookies = Set<String>()
+let set = Set(["aardvark", "astronaut", "azalea"])
+// Array
+var array: [String]
+let pythons = ["Eric", "Graham", "John", "Terry"]
+
+// 5. Dictionaries
+let heights = [
+    "Taylor Swift": 1.78,
+    "Ed Sheeran": 1.73
+]
+heights["Taylor Swift"]
+
+// 6. Dictionary Default Values
+let favIceCream = [
+    "Paul": "Chocolate",
+    "Sophie": "Vanilla",
+]
+
+favIceCream["Paul"]
+favIceCream["Alex", default: "Mint"]
+
+// 7. Creating empty Collections
+var emptyDictionary = [String: String]()
+emptyDictionary["Paul"] = "Red"
+var emptyDictionary2 = Dictionary<String, Int>()
+
+var emptyArray = [Int]()
+var emptyArray2 = Array<Int>()
+emptyArray.append(3)
+
+var emptySet = Set<String>()
+var numbers = Set<Int>()
+numbers.insert(2)
+
+// 8. Enumerations
+enum Result{
+    case success
+    case failure
+}
+
+let result4 = Result.failure
+
+// 9. Enum associated values
+enum Activity{
+    case bored
+    case running(destination: String)
+    case talking(topic: String)
+    case singing(artist: String, volume: Int)
+}
+let talking = Activity.talking(topic: "Ariana Grande")
+let singing = Activity.singing(artist: "Gaga", volume: 100)
+
+// 10. Enum raw values
+enum Planet: Int {
+    case mercury
+    case venus
+    case earth
+}
+
+let earth = Planet(rawValue: 2)
+
+enum Signs: Int {
+    case aries = 5
+    case taurus
+    case gemini
+}
+
+let gemini = Signs(rawValue: 7)
