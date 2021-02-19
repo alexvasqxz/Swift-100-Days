@@ -1,0 +1,43 @@
+import UIKit
+
+// 1. Variables
+var str = "Hello, playground"
+str = "Goodbye"
+
+// 2. Strings and Integers
+var age = 38
+var population = 8_000_000
+
+// 3. Mutli-line Strings
+var multiStr = """
+This is
+a multi-line
+string test
+"""
+
+var mulStr2 = """
+This is \
+a multi-line \
+string test 2
+"""
+
+// 4. Doubles and Booleans
+var pi = 3.1416
+var iAmThatB = true
+
+// 5. String Interpolation
+var myAge = 21
+var strInterpolation = "Alex's age is \(myAge)"
+str = "Goodbye, \(strInterpolation)"
+
+// 6. Constants
+let taylor = "Swift"
+
+// 7. Type Annotations
+let album: String = "Reputation"
+let year: Int = 1989
+let height: Double = 1.78
+let taylrRocks: Bool = true
+
+var percentage: Double = 99
+var name: String
