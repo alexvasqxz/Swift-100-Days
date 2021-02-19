@@ -1,5 +1,11 @@
 import UIKit
 
+/*
+ Day 1. Variables, simple data types and string interpolation
+    Created by Gustavo Alex Vasquez
+ Copyright © 2021 Alex Vasquez. All rights reserved.
+ */
+
 // 1. Variables
 var str = "Hello, playground"
 str = "Goodbye"
