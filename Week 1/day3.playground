@@ -1,0 +1,99 @@
+import UIKit
+
+/*
+ Day 3. Operators and Conditions
+    Created by Gustavo Alex Vasquez
+    Copyright © 2021 Alex Vasquez. All rights reserved.
+ */
+
+// 1. Arithmetic Operators
+let first = 12
+let second = 4
+
+let sum = first + second
+let difference = first - second
+let product = first * second
+let division = first / second
+let remainder = 13 % second
+
+let number = 35
+let isMultiple = number.isMultiple(of: 7)
+
+// 2. Operator overloading
+let fakers = "fakers gonna "
+let action = "fake"
+let chorus = fakers + action
+
+let firstHalf = ["Aries", "Taurus"]
+let secondHalf = ["Gemini", "Cancer"]
+let firstFour = firstHalf + secondHalf
+
+// 3. Compound assignment operators
+var score = 95
+score -= 5
+
+var quote = "Alex is so "
+quote += "awesome"
+
+// 4. Comparison operators
+var comparingOne = 5
+var comparingTwo = 8
+print (comparingOne == comparingTwo)
+print (comparingOne != comparingTwo)
+print (comparingOne < comparingTwo)
+
+// 5. Conditions
+let firstCard = 11
+let secondCard = 10
+
+if firstCard + secondCard == 21{
+    print("BlackJack")
+} else {
+    print ("Regular Cards")
+}
+
+// 6. Combining Conditions
+var Alex = 21
+var Layla = 20
+
+if (Alex > 21 && Layla > 21){
+    print ("Both are over 21")
+} else if (Alex > 18 || Layla > 18){
+    print ("At least one is over 18")
+}
+
+// 7. The ternary operator
+let terFirst = 20
+let terSecond = 10
+
+print(terFirst == terSecond ? "They are the same" : "They are different")
+print (terFirst >= terSecond ? "It's greater" : "It's not")
+
+// 8. Switch statements
+let weather = "sunny"
+switch weather {
+case "rainy":
+    print("Bring an umbrella")
+case "snowy":
+    print("Get a coat")
+case "sunny":
+    print("Wear sunscreen")
+default:
+    print("Enjoy")
+}
+
+// 9. Range operators
+let grade = 85
+switch grade {
+case ..<50:
+    print ("You failed badly")
+case ..<85: // ...85
+    print ("Kinda ok")
+default:
+    print("You did great")
+}
+
+let names = ["Abi", "Alex", "Raul", "Rodri"]
+print (names[1...3])
+print (names[1...])
+
