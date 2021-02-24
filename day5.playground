@@ -55,15 +55,52 @@ func printAge(_ age: Int){
 printAge(21)
 
 // 6. Default Parameters
+func greet(_ person: String, nicely: Bool = true){
+    if nicely == true {
+        print("Hello, \(person)")
+    } else {
+        print("Oh no, it's \(person) again...")
+    }
+}
 
+greet("Taylor")
+greet("Justin", nicely : false)
 
 // 7. Variadic Functions
+func squareKNumbers(numbers: Int...){
+    for number in numbers {
+        print("\(number) squared is \(number * number)")
+    }
+}
 
+squareKNumbers(numbers : 1,2,3,4,5)
 
 // 8. Writing Throwing Functions
+enum PasswordError: Error{
+    case obvious
+}
 
+func checkPassword(_ password: String) throws -> Bool {
+    if password == "password"{
+        throw PasswordError.obvious
+    }
+    
+    return true
+}
 
 // 9. Running Throwing Functions
-
+do {
+    try checkPassword("password")
+    print("That password is good!")
+} catch {
+    print("You can't use that password")
+}
 
 // 10. Inout Parameters
+func sum(_ a: inout Int, _ b: Int) -> Int {
+    a = a + 2
+    return a + b
+}
+
+var first = 26
+print(sum(&first, 8))
