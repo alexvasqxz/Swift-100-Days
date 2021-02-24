@@ -1,0 +1,69 @@
+import UIKit
+
+/*
+ Day 5. Functions, Parameters and Errors
+    Created by Gustavo Alex Vasquez
+    Copyright © 2021 Alex Vasquez. All rights reserved.
+ */
+
+// 1. Writing Functions
+func printHelp(){
+    let message = """
+    Welcome to my App
+    This is my fifth day
+    On the Course
+    """
+    
+    print (message)
+}
+
+printHelp()
+
+// 2. Accepting Parameters
+func square(number: Int){
+    print(number * number)
+}
+
+square(number: 8)
+
+// 3. Returning Values
+func product(numberA: Int, numberB : Int) -> Int {
+    return numberA * numberB
+}
+
+product(numberA: 10, numberB: 4)
+
+func getUser() -> (first: String, last: String){
+    (first: "Taylor", last: "Swift")
+}
+
+let user = getUser()
+print(user.last)
+
+// 4. Parameters Labels
+func sayHello(to name: String){
+    print("Hello \(name)")
+}
+
+sayHello(to: "Alex")
+
+// 5. Omitting Parameter Labels
+func printAge(_ age: Int){
+    print("My age is \(age)")
+}
+
+printAge(21)
+
+// 6. Default Parameters
+
+
+// 7. Variadic Functions
+
+
+// 8. Writing Throwing Functions
+
+
+// 9. Running Throwing Functions
+
+
+// 10. Inout Parameters
